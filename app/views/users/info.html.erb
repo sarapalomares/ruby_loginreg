@@ -1,0 +1,18 @@
+<div class="container">
+      <h3>Hi, <%= @user.first_name.capitalize %>! Here is your profile:</h3>
+      <hr>
+
+      <h5>First Name: <%= @user.first_name.capitalize %></h5>
+      <h5>Last Name: <%= @user.last_name.capitalize %></h5>
+      <h5>Email: <%= @user.email %></h5>
+
+      <form action="/edit/<%= @user.id %>" method="post"" method="post" role="form">
+            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+            <button type="submit" class="btn btn-info">Edit Profile</button>
+      </form>
+      <hr>
+      <form action="/show" method="post"" method="post" role="form">
+            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+            <button type="submit" class="btn btn-primary">Back</button>
+      </form>
+</div>

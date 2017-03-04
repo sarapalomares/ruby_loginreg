@@ -1,0 +1,61 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+      margin: 30px;
+}
+
+.login, .registration {
+      width: 500px;
+      padding: 10px;
+      border: 1px #009AC7 solid;
+      border-radius: 10px;
+      display: inline-block;
+}
+
+.login {
+      vertical-align: top;
+      margin-left: 50px;
+      margin-right: 30px;
+}
+
+.welcome {
+      text-align: center;
+}
+
+.flash_errors, .flash_message {
+      font-weight: bold;
+      color: red;
+}
+
+.users_all {
+      width: 600px;
+      border-radius: 10px;
+      border: 1px #009AC7 solid;
+      padding-left: 5px;
+      padding-top: 5px;
+}
+
+.show_buttons {
+      display: block;
+}
+
+.info_message {
+      font-weight: bold;
+      color: red;
+}
+
+.enter_password {
+      font-weight: bold;
+      color: red;
+}
+
+.pw_rules {
+      font-weight: bold;
+      color: #009AC7;
+}
+
+.edit_info {
+      width: 600px;
+}

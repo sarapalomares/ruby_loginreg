@@ -1,0 +1,52 @@
+<div class="container">
+      <div class="welcome">
+            <h1>Welcome to Sara's World!</h1><br>
+      </div>
+
+      <div class="login">
+            <h3>Welcome back! Login below:</h3>
+            <p class="flash_message"><%= flash[:message] %></p>
+            <form action="/login" method="post">
+            <input name="authenticity_token" value= "<%= form_authenticity_token %>" type="hidden">
+                  <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                  </div>
+                  <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                  </div>
+                  <button type="submit" class="btn btn-info">Log In</button>
+            </form>
+      </div>
+
+      <div class="registration">
+            <h3>New user? Register here:</h3>
+            <p class="flash_errors"><%= flash[:errors] %></p>
+            <form action="/create" method="post">
+            <input name="authenticity_token" value= "<%= form_authenticity_token %>" type="hidden">
+                  <div class="form-group">
+                        <label for="f_name">First Name:</label>
+                        <input type="text" class="form-control" id="f_name" name="f_name">
+                  </div>
+                  <div class="form-group">
+                        <label for="l_name">Last Name:</label>
+                        <input type="text" class="form-control" id="l_name" name="l_name">
+                  </div>
+                  <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                  </div>
+                  <h5 class="pw_rules">*Password must be at least 7 characters long:</h5>
+                  <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                  </div>
+                  <div class="form-group">
+                        <label for="password_confirmation">Re-type Password:</label>
+                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
+                  </div>
+                  <button type="submit" class="btn btn-info">Register</button>
+            </form>
+      </div>
+</div>
